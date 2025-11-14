@@ -4,9 +4,9 @@ export default function AiSuggesterPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-3xl font-bold font-headline">AI Component Suggester</h1>
+        <h1 className="text-3xl font-bold font-headline">Người đề xuất thành phần AI</h1>
         <p className="mt-2 text-muted-foreground">
-            Leverage AI to get intelligent component recommendations based on your project needs.
+            Tận dụng AI để nhận các đề xuất thành phần thông minh dựa trên nhu cầu dự án của bạn.
         </p>
       </div>
       <AiSuggester />

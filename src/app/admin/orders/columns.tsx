@@ -18,13 +18,13 @@ import { Badge } from "@/components/ui/badge"
 
 const statusVariant = (status: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (status) {
-      case 'Delivered':
+      case 'Đã giao hàng':
         return 'default';
-      case 'Shipped':
+      case 'Đã vận chuyển':
         return 'secondary';
-      case 'Pending':
+      case 'Chờ xử lý':
         return 'outline';
-      case 'Cancelled':
+      case 'Đã hủy':
         return 'destructive';
       default:
         return 'default';
@@ -34,16 +34,16 @@ const statusVariant = (status: string): "default" | "secondary" | "destructive" 
 export const columns: ColumnDef<Order>[] = [
   {
     accessorKey: "id",
-    header: "Order ID",
+    header: "Mã đơn hàng",
     cell: ({ row }) => <div className="font-medium">{row.getValue("id")}</div>,
   },
   {
     accessorKey: "customerName",
-    header: "Customer",
+    header: "Khách hàng",
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: "Trạng thái",
     cell: ({ row }) => {
         const status = row.getValue("status") as string;
         return <Badge variant={statusVariant(status)}>{status}</Badge>
@@ -60,7 +60,7 @@ export const columns: ColumnDef<Order>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Date
+          Ngày
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
@@ -72,7 +72,7 @@ export const columns: ColumnDef<Order>[] = [
   },
   {
     accessorKey: "total",
-    header: () => <div className="text-right">Total</div>,
+    header: () => <div className="text-right">Tổng cộng</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("total"))
       const formatted = new Intl.NumberFormat("en-US", {
@@ -93,16 +93,16 @@ export const columns: ColumnDef<Order>[] = [
             <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Mở menu</span>
                 <MoreHorizontal className="h-4 w-4" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                <DropdownMenuItem>View Order Details</DropdownMenuItem>
-                <DropdownMenuItem>Update Status</DropdownMenuItem>
+                <DropdownMenuLabel>Hành động</DropdownMenuLabel>
+                <DropdownMenuItem>Xem chi tiết đơn hàng</DropdownMenuItem>
+                <DropdownMenuItem>Cập nhật trạng thái</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Cancel Order</DropdownMenuItem>
+                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Hủy đơn hàng</DropdownMenuItem>
             </DropdownMenuContent>
             </DropdownMenu>
         </div>

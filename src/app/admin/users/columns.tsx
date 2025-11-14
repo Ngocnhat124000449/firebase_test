@@ -25,7 +25,7 @@ export const columns: ColumnDef<User>[] = [
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            Name
+            Tên
             <ArrowUpDown className="ml-2 h-4 w-4" />
           </Button>
         )
@@ -37,7 +37,7 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "role",
-    header: "Role",
+    header: "Vai trò",
     cell: ({ row }) => {
         const role = row.getValue("role") as string;
         return <Badge variant={role === 'admin' ? "default" : "secondary"}>{role}</Badge>
@@ -45,7 +45,7 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "createdAt",
-    header: "Joined Date",
+    header: "Ngày tham gia",
     cell: ({ row }) => {
         const date = row.getValue("createdAt") as Date;
         return <div>{format(date, "MMM d, yyyy")}</div>
@@ -59,16 +59,16 @@ export const columns: ColumnDef<User>[] = [
             <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Mở menu</span>
                 <MoreHorizontal className="h-4 w-4" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                <DropdownMenuItem>View User Details</DropdownMenuItem>
-                <DropdownMenuItem>Change Role</DropdownMenuItem>
+                <DropdownMenuLabel>Hành động</DropdownMenuLabel>
+                <DropdownMenuItem>Xem chi tiết người dùng</DropdownMenuItem>
+                <DropdownMenuItem>Thay đổi vai trò</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Delete User</DropdownMenuItem>
+                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Xóa người dùng</DropdownMenuItem>
             </DropdownMenuContent>
             </DropdownMenu>
         </div>

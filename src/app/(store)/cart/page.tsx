@@ -21,14 +21,14 @@ export default function CartPage() {
   
   return (
     <div className="container py-8 md:py-12">
-      <h1 className="text-3xl md:text-4xl font-bold font-headline mb-8">Your Cart</h1>
+      <h1 className="text-3xl md:text-4xl font-bold font-headline mb-8">Giỏ hàng của bạn</h1>
       {state.items.length === 0 ? (
         <div className="text-center py-16 border-2 border-dashed rounded-lg">
           <ShoppingCart className="mx-auto h-16 w-16 text-muted-foreground" />
-          <h2 className="mt-6 text-xl font-semibold">Your cart is empty</h2>
-          <p className="mt-2 text-muted-foreground">Looks like you haven't added anything to your cart yet.</p>
+          <h2 className="mt-6 text-xl font-semibold">Giỏ hàng của bạn đang trống</h2>
+          <p className="mt-2 text-muted-foreground">Có vẻ như bạn chưa thêm bất cứ thứ gì vào giỏ hàng của mình.</p>
           <Button asChild className="mt-6">
-            <Link href="/products">Start Shopping</Link>
+            <Link href="/products">Bắt đầu mua sắm</Link>
           </Button>
         </div>
       ) : (
@@ -75,24 +75,24 @@ export default function CartPage() {
           <div className="lg:col-span-1">
             <Card>
               <CardHeader>
-                <CardTitle className="font-headline text-xl">Order Summary</CardTitle>
+                <CardTitle className="font-headline text-xl">Tóm tắt đơn hàng</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex justify-between">
-                  <span>Subtotal ({totalItems} items)</span>
+                  <span>Tổng phụ ({totalItems} mặt hàng)</span>
                   <span>${totalPrice.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Shipping</span>
-                  <span>Free</span>
+                  <span>Giao hàng</span>
+                  <span>Miễn phí</span>
                 </div>
                 <div className="flex justify-between font-bold text-lg border-t pt-4">
-                  <span>Total</span>
+                  <span>Tổng cộng</span>
                   <span>${totalPrice.toFixed(2)}</span>
                 </div>
               </CardContent>
               <CardFooter>
-                <Button size="lg" className="w-full">Proceed to Checkout</Button>
+                <Button size="lg" className="w-full">Tiến hành thanh toán</Button>
               </CardFooter>
             </Card>
           </div>

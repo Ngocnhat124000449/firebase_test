@@ -44,21 +44,21 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             {product.stock > 0 ? (
                 <Badge variant="outline" className='border-green-500 text-green-600'>
                     <Package className="mr-2 h-4 w-4" />
-                    {product.stock} in stock
+                    {product.stock} còn hàng
                 </Badge>
             ) : (
-                <Badge variant="destructive">Out of stock</Badge>
+                <Badge variant="destructive">Hết hàng</Badge>
             )}
           </div>
           <p className="mt-6 text-muted-foreground">{product.description}</p>
           <div className="mt-8">
             <Button size="lg" onClick={handleAddToCart} disabled={product.stock === 0}>
               <ShoppingCart className="mr-2 h-5 w-5" />
-              Add to Cart
+              Thêm vào giỏ hàng
             </Button>
           </div>
           <div className="mt-12">
-            <h3 className="text-xl font-semibold font-headline">Specifications</h3>
+            <h3 className="text-xl font-semibold font-headline">Thông số kỹ thuật</h3>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
               {Object.entries(product.specifications).map(([key, value]) => (
                 <li key={key} className="flex justify-between border-b pb-2">
@@ -72,7 +72,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       </div>
       
       <div className="mt-16 md:mt-24">
-        <h2 className="text-3xl font-bold font-headline mb-8">Related Products</h2>
+        <h2 className="text-3xl font-bold font-headline mb-8">Sản phẩm liên quan</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {relatedProducts.map(p => <ProductCard key={p.id} product={p}/>)}
         </div>

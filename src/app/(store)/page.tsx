@@ -26,13 +26,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative container h-full flex flex-col items-start justify-center text-white">
           <h1 className="text-4xl md:text-6xl font-bold font-headline max-w-2xl">
-            Build Your Next Big Idea
+            Xây dựng ý tưởng lớn tiếp theo của bạn
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-xl text-primary-foreground/80">
-            High-quality electronic components for hobbyists and professionals.
+            Linh kiện điện tử chất lượng cao cho người có sở thích và chuyên gia.
           </p>
           <Button asChild size="lg" className="mt-8">
-            <Link href="/products">Shop Now</Link>
+            <Link href="/products">Mua ngay</Link>
           </Button>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function HomePage() {
       {/* Categories Section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center font-headline">Shop by Category</h2>
+          <h2 className="text-3xl font-bold text-center font-headline">Mua sắm theo danh mục</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
             {CATEGORIES.slice(0,6).map((category) => (
               <Link href={`/products?category=${category.id}`} key={category.id}>
@@ -57,10 +57,10 @@ export default function HomePage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-bold font-headline">Featured Products</h2>
+            <h2 className="text-3xl font-bold font-headline">Sản phẩm nổi bật</h2>
             <Button variant="ghost" asChild>
               <Link href="/products">
-                View All <ChevronRight className="w-4 h-4 ml-1" />
+                Xem tất cả <ChevronRight className="w-4 h-4 ml-1" />
               </Link>
             </Button>
           </div>

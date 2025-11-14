@@ -27,17 +27,17 @@ export function SiteHeader() {
           <span className="font-bold font-headline sm:inline-block">TechZone</span>
         </Link>
         <nav className="hidden md:flex flex-1 items-center space-x-6 text-sm font-medium">
-          <Link href="/" className="transition-colors hover:text-foreground/80 text-foreground/60">Home</Link>
-          <Link href="/products" className="transition-colors hover:text-foreground/80 text-foreground">Products</Link>
+          <Link href="/" className="transition-colors hover:text-foreground/80 text-foreground/60">Trang chủ</Link>
+          <Link href="/products" className="transition-colors hover:text-foreground/80 text-foreground">Sản phẩm</Link>
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <div className="hidden sm:flex flex-1 max-w-sm items-center space-x-2">
-            <Input type="search" placeholder="Search for components..." className="h-9" />
+            <Input type="search" placeholder="Tìm kiếm thành phần..." className="h-9" />
             <Button type="submit" variant="secondary" size="icon" className="h-9 w-9">
               <Search className="h-4 w-4" />
             </Button>
           </div>
-          <Link href="/cart" aria-label="Open shopping cart">
+          <Link href="/cart" aria-label="Mở giỏ hàng">
             <Button variant="ghost" size="icon" className="relative">
               <ShoppingCart className="h-5 w-5" />
               {totalItems > 0 && (
@@ -53,13 +53,13 @@ export function SiteHeader() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuLabel>Tài khoản của tôi</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem asChild><Link href="#">Profile</Link></DropdownMenuItem>
-              <DropdownMenuItem asChild><Link href="#">Order History</Link></DropdownMenuItem>
-              <DropdownMenuItem asChild><Link href="/admin/dashboard">Admin Dashboard</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="#">Hồ sơ</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="#">Lịch sử đơn hàng</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link href="/admin/dashboard">Bảng điều khiển quản trị</Link></DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Log out</DropdownMenuItem>
+              <DropdownMenuItem>Đăng xuất</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 

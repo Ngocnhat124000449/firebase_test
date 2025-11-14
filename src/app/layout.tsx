@@ -4,8 +4,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'TechZone E-Store',
-  description: 'Your one-stop shop for electronic components',
+  title: 'Cửa hàng điện tử TechZone',
+  description: 'Cửa hàng tổng hợp linh kiện điện tử của bạn',
 };
 
 const poppins = Poppins({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="vi" suppressHydrationWarning>
        <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

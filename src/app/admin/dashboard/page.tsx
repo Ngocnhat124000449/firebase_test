@@ -16,13 +16,13 @@ export default function DashboardPage() {
 
   const statusVariant = (status: string): "default" | "secondary" | "destructive" | "outline" => {
     switch (status) {
-      case 'Delivered':
+      case 'Đã giao hàng':
         return 'default';
-      case 'Shipped':
+      case 'Đã vận chuyển':
         return 'secondary';
-      case 'Pending':
+      case 'Chờ xử lý':
         return 'outline';
-      case 'Cancelled':
+      case 'Đã hủy':
         return 'destructive';
       default:
         return 'default';
@@ -31,44 +31,44 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      <h1 className="text-3xl font-bold font-headline">Dashboard</h1>
+      <h1 className="text-3xl font-bold font-headline">Bảng điều khiển</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <StatCard 
-          title="Total Revenue" 
+          title="Tổng doanh thu" 
           value={`$${totalRevenue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
           icon={DollarSign}
         />
         <StatCard 
-          title="Total Orders" 
+          title="Tổng số đơn hàng" 
           value={`+${totalOrders}`}
           icon={ShoppingCart}
         />
         <StatCard 
-          title="Total Products" 
+          title="Tổng sản phẩm" 
           value={`${totalProducts}`}
           icon={Package}
         />
         <StatCard 
-          title="Low Stock Alerts" 
+          title="Cảnh báo hàng sắp hết" 
           value={`${lowStockProducts.length}`}
           icon={AlertCircle}
-          description='Products with less than 10 items'
+          description='Sản phẩm còn lại dưới 10'
         />
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-7">
         <Card className="lg:col-span-4">
           <CardHeader>
-            <CardTitle>Recent Orders</CardTitle>
+            <CardTitle>Đơn hàng gần đây</CardTitle>
           </CardHeader>
           <CardContent>
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>Order ID</TableHead>
-                  <TableHead>Customer</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead className="text-right">Total</TableHead>
+                  <TableHead>Mã đơn hàng</TableHead>
+                  <TableHead>Khách hàng</TableHead>
+                  <TableHead>Trạng thái</TableHead>
+                  <TableHead className="text-right">Tổng cộng</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -88,9 +88,9 @@ export default function DashboardPage() {
         </Card>
         <Card className="lg:col-span-3">
           <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle>Low Stock Products</CardTitle>
+            <CardTitle>Sản phẩm sắp hết hàng</CardTitle>
             <Button asChild variant="ghost" size="sm">
-                <Link href="/admin/products">View All</Link>
+                <Link href="/admin/products">Xem tất cả</Link>
             </Button>
           </CardHeader>
           <CardContent>
@@ -101,10 +101,10 @@ export default function DashboardPage() {
                     <p className="text-sm font-medium leading-none">{product.name}</p>
                     <p className="text-sm text-muted-foreground">{product.category.name}</p>
                   </div>
-                  <div className="ml-auto font-medium">{product.stock} left</div>
+                  <div className="ml-auto font-medium">còn {product.stock}</div>
                 </div>
               )) : (
-                <p className="text-sm text-muted-foreground text-center py-4">No products are low on stock.</p>
+                <p className="text-sm text-muted-foreground text-center py-4">Không có sản phẩm nào sắp hết hàng.</p>
               )}
             </div>
           </CardContent>

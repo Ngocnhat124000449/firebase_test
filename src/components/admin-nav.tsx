@@ -28,11 +28,11 @@ import { Separator } from "@/components/ui/separator"
 import { Button } from "./ui/button"
 
 const menuItems = [
-  { href: "/admin/dashboard", icon: LayoutDashboard, label: "Dashboard" },
-  { href: "/admin/products", icon: Package, label: "Products" },
-  { href: "/admin/orders", icon: ShoppingCart, label: "Orders" },
-  { href: "/admin/users", icon: Users, label: "Users" },
-  { href: "/admin/ai-suggester", icon: Lightbulb, label: "AI Suggester" },
+  { href: "/admin/dashboard", icon: LayoutDashboard, label: "Bảng điều khiển" },
+  { href: "/admin/products", icon: Package, label: "Sản phẩm" },
+  { href: "/admin/orders", icon: ShoppingCart, label: "Đơn hàng" },
+  { href: "/admin/users", icon: Users, label: "Người dùng" },
+  { href: "/admin/ai-suggester", icon: Lightbulb, label: "Gợi ý của AI" },
 ]
 
 export function AdminNav() {
@@ -56,7 +56,7 @@ export function AdminNav() {
         </SidebarHeader>
         <SidebarMenu>
           <SidebarGroup>
-            <SidebarGroupLabel>Management</SidebarGroupLabel>
+            <SidebarGroupLabel>Quản lý</SidebarGroupLabel>
             {menuItems.map((item) => (
               <SidebarMenuItem key={item.href}>
                 <SidebarMenuButton
@@ -79,11 +79,11 @@ export function AdminNav() {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              tooltip={{ children: "Settings" }}
+              tooltip={{ children: "Cài đặt" }}
             >
               <Link href="#">
                 <Settings />
-                <span>Settings</span>
+                <span>Cài đặt</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

@@ -64,8 +64,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const enhancedDispatch = (action: CartAction) => {
     if (action.type === 'ADD_ITEM') {
         toast({
-            title: "Added to cart",
-            description: `${action.payload.name} has been added to your cart.`,
+            title: "Đã thêm vào giỏ hàng",
+            description: `${action.payload.name} đã được thêm vào giỏ hàng của bạn.`,
         });
     }
     dispatch(action);

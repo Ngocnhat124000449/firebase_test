@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <p className="text-xl font-semibold">${product.price.toFixed(2)}</p>
         <Button size="sm" onClick={handleAddToCart}>
           <ShoppingCart className="mr-2 h-4 w-4" />
-          Add to Cart
+          Thêm vào giỏ hàng
         </Button>
       </CardFooter>
     </Card>

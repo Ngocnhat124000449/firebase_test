@@ -24,7 +24,7 @@ export const columns: ColumnDef<Product>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Name
+          Tên
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
@@ -33,14 +33,14 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "category.name",
-    header: "Category",
+    header: "Danh mục",
     filterFn: (row, id, value) => {
       return value.includes(row.getValue(id))
     },
   },
   {
     accessorKey: "price",
-    header: () => <div className="text-right">Price</div>,
+    header: () => <div className="text-right">Giá</div>,
     cell: ({ row }) => {
       const amount = parseFloat(row.getValue("price"))
       const formatted = new Intl.NumberFormat("en-US", {
@@ -59,7 +59,7 @@ export const columns: ColumnDef<Product>[] = [
                 variant="ghost"
                 onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
                 >
-                Stock
+                Tồn kho
                 <ArrowUpDown className="ml-2 h-4 w-4" />
             </Button>
         </div>
@@ -87,20 +87,20 @@ export const columns: ColumnDef<Product>[] = [
             <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="h-8 w-8 p-0">
-                <span className="sr-only">Open menu</span>
+                <span className="sr-only">Mở menu</span>
                 <MoreHorizontal className="h-4 w-4" />
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                <DropdownMenuLabel>Hành động</DropdownMenuLabel>
                 <DropdownMenuItem
                 onClick={() => navigator.clipboard.writeText(product.id)}
                 >
-                Copy product ID
+                Sao chép ID sản phẩm
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem>Edit Product</DropdownMenuItem>
-                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Delete Product</DropdownMenuItem>
+                <DropdownMenuItem>Chỉnh sửa sản phẩm</DropdownMenuItem>
+                <DropdownMenuItem className="text-destructive focus:text-destructive focus:bg-destructive/10">Xóa sản phẩm</DropdownMenuItem>
             </DropdownMenuContent>
             </DropdownMenu>
         </div>

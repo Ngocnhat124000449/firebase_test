@@ -25,16 +25,16 @@ export default function ProductsPage({
   return (
     <div className="container py-8">
       <header className="mb-8">
-        <h1 className="text-4xl font-bold font-headline">Our Products</h1>
+        <h1 className="text-4xl font-bold font-headline">Sản phẩm của chúng tôi</h1>
         <p className="mt-2 text-muted-foreground">
-          Find the components you need for your next project.
+          Tìm các thành phần bạn cần cho dự án tiếp theo của mình.
         </p>
       </header>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <aside className="md:col-span-1">
             <Card>
                 <CardHeader>
-                    <CardTitle className="font-headline text-xl">Categories</CardTitle>
+                    <CardTitle className="font-headline text-xl">Danh mục</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <ScrollArea className="h-full">
@@ -47,7 +47,7 @@ export default function ProductsPage({
                                     : 'hover:bg-accent'
                                 }`}
                                 >
-                                All Products
+                                Tất cả sản phẩm
                             </Link>
                             {CATEGORIES.map((category) => (
                                 <Link

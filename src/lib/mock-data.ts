@@ -8,17 +8,17 @@ const findImage = (id: string) => {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: 'cpu', name: 'Processors (CPU)' },
-  { id: 'ram', name: 'Memory (RAM)' },
-  { id: 'gpu', name: 'Graphics Cards' },
-  { id: 'storage', name: 'Storage' },
-  { id: 'motherboards', name: 'Motherboards' },
-  { id: 'psu', name: 'Power Supplies' },
-  { id: 'sbc', name: 'Single-Board Computers' },
-  { id: 'sensors', name: 'Sensors' },
-  { id: 'modules', name: 'Modules' },
-  { id: 'ics', name: 'Integrated Circuits' },
-  { id: 'passive', name: 'Passive Components' },
+  { id: 'cpu', name: 'Bộ xử lý (CPU)' },
+  { id: 'ram', name: 'Bộ nhớ (RAM)' },
+  { id: 'gpu', name: 'Card đồ họa' },
+  { id: 'storage', name: 'Lưu trữ' },
+  { id: 'motherboards', name: 'Bo mạch chủ' },
+  { id: 'psu', name: 'Nguồn máy tính' },
+  { id: 'sbc', name: 'Máy tính một bo' },
+  { id: 'sensors', name: 'Cảm biến' },
+  { id: 'modules', name: 'Mô-đun' },
+  { id: 'ics', name: 'Mạch tích hợp' },
+  { id: 'passive', name: 'Linh kiện thụ động' },
 ];
 
 export const PRODUCTS: Product[] = [
@@ -157,7 +157,7 @@ export const PRODUCTS: Product[] = [
 ];
 
 export const USERS: User[] = [
-    { id: '1', name: 'Admin', email: 'admin@techzone.com', role: 'admin', createdAt: new Date('2023-01-15') },
+    { id: '1', name: 'Quản trị viên', email: 'admin@techzone.com', role: 'admin', createdAt: new Date('2023-01-15') },
     { id: '2', name: 'Alice', email: 'alice@example.com', role: 'customer', createdAt: new Date('2023-02-20') },
     { id: '3', name: 'Bob', email: 'bob@example.com', role: 'customer', createdAt: new Date('2023-03-10') },
     { id: '4', name: 'Charlie', email: 'charlie@example.com', role: 'customer', createdAt: new Date('2023-04-05') },
@@ -173,7 +173,7 @@ export const ORDERS: Order[] = [
       { productId: '8', productName: 'Connecta-Fi ESP32-S3 Module', quantity: 2, price: 14.99 },
     ],
     total: 79.93,
-    status: 'Delivered',
+    status: 'Đã giao hàng',
     createdAt: new Date('2023-10-25'),
   },
   {
@@ -184,7 +184,7 @@ export const ORDERS: Order[] = [
       { productId: '3', productName: 'NebulaRender RTX 5090', quantity: 1, price: 1999.99 },
     ],
     total: 1999.99,
-    status: 'Shipped',
+    status: 'Đã vận chuyển',
     createdAt: new Date('2023-10-28'),
   },
   {
@@ -196,7 +196,7 @@ export const ORDERS: Order[] = [
       { productId: '10', productName: 'OhmGuard Resistor Kit', quantity: 1, price: 19.99 },
     ],
     total: 44.98,
-    status: 'Pending',
+    status: 'Chờ xử lý',
     createdAt: new Date(),
   },
     {
@@ -207,7 +207,7 @@ export const ORDERS: Order[] = [
       { productId: '12', productName: 'BerryBoard Pi 5 8GB', quantity: 1, price: 80.00 },
     ],
     total: 80.00,
-    status: 'Cancelled',
+    status: 'Đã hủy',
     createdAt: new Date('2023-09-15'),
   },
 ];

@@ -35,7 +35,7 @@ export type Order = {
     price: number;
   }[];
   total: number;
-  status: 'Pending' | 'Shipped' | 'Delivered' | 'Cancelled';
+  status: 'Chờ xử lý' | 'Đã vận chuyển' | 'Đã giao hàng' | 'Đã hủy';
   createdAt: Date;
 };
 

@@ -31,7 +31,7 @@ import {
   } from "@/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 
-const statuses: ('Pending' | 'Shipped' | 'Delivered' | 'Cancelled')[] = ['Pending', 'Shipped', 'Delivered', 'Cancelled'];
+const statuses: ('Chờ xử lý' | 'Đã vận chuyển' | 'Đã giao hàng' | 'Đã hủy')[] = ['Chờ xử lý', 'Đã vận chuyển', 'Đã giao hàng', 'Đã hủy'];
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -64,7 +64,7 @@ export function DataTable<TData, TValue>({
     <div className="rounded-lg border bg-card">
       <div className="flex items-center p-4 gap-4">
         <Input
-          placeholder="Filter by customer..."
+          placeholder="Lọc theo khách hàng..."
           value={(table.getColumn("customerName")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
             table.getColumn("customerName")?.setFilterValue(event.target.value)
@@ -74,7 +74,7 @@ export function DataTable<TData, TValue>({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
-              Status <ChevronDown className="ml-2 h-4 w-4" />
+              Trạng thái <ChevronDown className="ml-2 h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -137,7 +137,7 @@ export function DataTable<TData, TValue>({
           ) : (
             <TableRow>
               <TableCell colSpan={columns.length} className="h-24 text-center">
-                No results.
+                Không có kết quả.
               </TableCell>
             </TableRow>
           )}
@@ -150,7 +150,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          Previous
+          Trước
         </Button>
         <Button
           variant="outline"
@@ -158,7 +158,7 @@ export function DataTable<TData, TValue>({
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          Next
+          Sau
         </Button>
       </div>
     </div>

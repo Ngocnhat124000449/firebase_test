@@ -19,7 +19,7 @@ import { getAiSuggestions } from "@/app/actions";
 import { Lightbulb, Loader2 } from "lucide-react";
 
 const formSchema = z.object({
-  projectRequirements: z.string().min(20, "Please provide more details about your project."),
+  projectRequirements: z.string().min(20, "Vui lòng cung cấp thêm chi tiết về dự án của bạn."),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -46,7 +46,7 @@ export function AiSuggester() {
     if (result.success && result.data?.suggestedComponents) {
       setSuggestion(result.data.suggestedComponents);
     } else {
-      setError(result.error || "Failed to get suggestions.");
+      setError(result.error || "Không thể nhận được đề xuất.");
     }
     
     setIsLoading(false);
@@ -56,7 +56,7 @@ export function AiSuggester() {
     <div className="grid md:grid-cols-2 gap-8">
       <Card>
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">Describe Your Project</CardTitle>
+          <CardTitle className="font-headline text-2xl">Mô tả dự án của bạn</CardTitle>
         </CardHeader>
         <CardContent>
           <Form {...form}>
@@ -66,10 +66,10 @@ export function AiSuggester() {
                 name="projectRequirements"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Project Requirements</FormLabel>
+                    <FormLabel>Yêu cầu dự án</FormLabel>
                     <FormControl>
                       <Textarea
-                        placeholder="e.g., I'm building a weather station that measures temperature, humidity, and pressure, and sends data to a web server via Wi-Fi."
+                        placeholder="ví dụ: Tôi đang xây dựng một trạm thời tiết đo nhiệt độ, độ ẩm và áp suất, đồng thời gửi dữ liệu đến máy chủ web qua Wi-Fi."
                         className="min-h-[150px]"
                         {...field}
                       />
@@ -82,12 +82,12 @@ export function AiSuggester() {
                 {isLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Getting Suggestions...
+                    Đang nhận đề xuất...
                   </>
                 ) : (
                   <>
                     <Lightbulb className="mr-2 h-4 w-4" />
-                    Get Suggestions
+                    Nhận đề xuất
                   </>
                 )}
               </Button>
@@ -98,13 +98,13 @@ export function AiSuggester() {
 
       <Card className="flex flex-col">
         <CardHeader>
-          <CardTitle className="font-headline text-2xl">Suggested Components</CardTitle>
+          <CardTitle className="font-headline text-2xl">Các thành phần được đề xuất</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
                 <Loader2 className="h-8 w-8 animate-spin mb-4" />
-                <p>Analyzing your requirements...</p>
+                <p>Đang phân tích yêu cầu của bạn...</p>
             </div>
           )}
           {error && <p className="text-destructive">{error}</p>}
@@ -116,7 +116,7 @@ export function AiSuggester() {
           {!isLoading && !suggestion && !error && (
             <div className="flex flex-col items-center justify-center h-full text-center text-muted-foreground border-2 border-dashed rounded-lg p-8">
               <Lightbulb className="h-10 w-10 mb-4" />
-              <p>Your component suggestions will appear here once you describe your project.</p>
+              <p>Các đề xuất thành phần của bạn sẽ xuất hiện ở đây sau khi bạn mô tả dự án của mình.</p>
             </div>
           )}
         </CardContent>
