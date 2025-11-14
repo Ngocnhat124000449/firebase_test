@@ -4,7 +4,7 @@ import type { ColumnDef } from "@tanstack/react-table"
 import type { Product } from "@/lib/types"
 import { MoreHorizontal, ArrowUpDown } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/frontend/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,8 +12,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Badge } from "@/components/ui/badge"
+} from "@/frontend/components/ui/dropdown-menu"
+import { Badge } from "@/frontend/components/ui/badge"
 
 export const columns: ColumnDef<Product>[] = [
   {

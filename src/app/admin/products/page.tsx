@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/frontend/components/ui/button";
 import { PlusCircle } from "lucide-react";
 import { PRODUCTS } from "@/lib/mock-data";
 import { columns } from "./columns";

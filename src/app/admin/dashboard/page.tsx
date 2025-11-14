@@ -1,11 +1,11 @@
-import { StatCard } from '@/components/stat-card';
+import { StatCard } from '@/frontend/components/stat-card';
 import { DollarSign, Package, ShoppingCart, Users, AlertCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle } from '@/frontend/components/ui/card';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/frontend/components/ui/table';
+import { Badge } from '@/frontend/components/ui/badge';
 import { ORDERS, PRODUCTS } from '@/lib/mock-data';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/frontend/components/ui/button';
 
 export default function DashboardPage() {
   const totalRevenue = ORDERS.reduce((sum, order) => sum + order.total, 0);

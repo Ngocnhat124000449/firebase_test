@@ -3,10 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/frontend/components/ui/button';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/frontend/components/ui/card';
 import { ShoppingCart } from 'lucide-react';
-import { useCart } from '@/context/cart-provider';
+import { useCart } from '@/frontend/context/cart-provider';
 
 interface ProductCardProps {
   product: Product;

@@ -23,8 +23,8 @@ import {
   SidebarMenuButton,
   SidebarGroup,
   SidebarGroupLabel,
-} from "@/components/ui/sidebar"
-import { Separator } from "@/components/ui/separator"
+} from "@/frontend/components/ui/sidebar"
+import { Separator } from "@/frontend/components/ui/separator"
 import { Button } from "./ui/button"
 
 const menuItems = [

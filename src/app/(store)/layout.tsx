@@ -1,6 +1,6 @@
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
-import { CartProvider } from '@/context/cart-provider';
+import { SiteHeader } from '@/frontend/components/site-header';
+import { SiteFooter } from '@/frontend/components/site-footer';
+import { CartProvider } from '@/frontend/context/cart-provider';
 
 export default function StoreLayout({
   children,

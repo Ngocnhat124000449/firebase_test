@@ -1,6 +1,6 @@
 "use server";
 
-import { suggestComponentsWithAI, type SuggestComponentsWithAIInput } from "@/ai/flows/suggest-components-with-ai";
+import { suggestComponentsWithAI, type SuggestComponentsWithAIInput } from "@/backend/ai/flows/suggest-components-with-ai";
 
 export async function getAiSuggestions(input: SuggestComponentsWithAIInput) {
     try {

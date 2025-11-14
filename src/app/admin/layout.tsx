@@ -1,5 +1,5 @@
-import { AdminNav } from "@/components/admin-nav";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { AdminNav } from "@/frontend/components/admin-nav";
+import { SidebarProvider } from "@/frontend/components/ui/sidebar";
 
 export default function AdminLayout({
   children,

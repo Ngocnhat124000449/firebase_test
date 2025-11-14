@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/frontend/components/product-card';
 import { CATEGORIES, PRODUCTS } from '@/lib/mock-data';
 import Link from 'next/link';
 import {
@@ -6,8 +6,8 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { ScrollArea } from "@/components/ui/scroll-area"
+} from "@/frontend/components/ui/card"
+import { ScrollArea } from "@/frontend/components/ui/scroll-area"
 
 
 export default function ProductsPage({

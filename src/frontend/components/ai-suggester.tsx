@@ -11,11 +11,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getAiSuggestions } from "@/app/actions";
+} from "@/frontend/components/ui/form";
+import { Textarea } from "@/frontend/components/ui/textarea";
+import { Button } from "@/frontend/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/frontend/components/ui/card";
+import { getAiSuggestions } from "@/backend/actions";
 import { Lightbulb, Loader2 } from "lucide-react";
 
 const formSchema = z.object({

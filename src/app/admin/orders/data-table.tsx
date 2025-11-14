@@ -20,15 +20,15 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+} from "@/frontend/components/ui/table"
+import { Button } from "@/frontend/components/ui/button"
+import { Input } from "@/frontend/components/ui/input"
 import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
     DropdownMenuContent,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+  } from "@/frontend/components/ui/dropdown-menu"
 import { ChevronDown } from "lucide-react"
 
 const statuses: ('Chờ xử lý' | 'Đã vận chuyển' | 'Đã giao hàng' | 'Đã hủy')[] = ['Chờ xử lý', 'Đã vận chuyển', 'Đã giao hàng', 'Đã hủy'];

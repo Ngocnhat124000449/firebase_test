@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import { CircuitBoard, Search, ShoppingCart, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { useCart } from '@/context/cart-provider';
+import { Button } from '@/frontend/components/ui/button';
+import { Input } from '@/frontend/components/ui/input';
+import { Badge } from '@/frontend/components/ui/badge';
+import { useCart } from '@/frontend/context/cart-provider';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,7 +13,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/frontend/components/ui/dropdown-menu"
 
 
 export function SiteHeader() {

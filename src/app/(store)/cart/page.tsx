@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useCart } from '@/context/cart-provider';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { useCart } from '@/frontend/context/cart-provider';
+import { Button } from '@/frontend/components/ui/button';
+import { Input } from '@/frontend/components/ui/input';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/frontend/components/ui/card';
 import { Trash2, ShoppingCart } from 'lucide-react';
 
 export default function CartPage() {

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { ProductCard } from '@/components/product-card';
+import { Button } from '@/frontend/components/ui/button';
+import { ProductCard } from '@/frontend/components/product-card';
 import { CATEGORIES, PRODUCTS } from '@/lib/mock-data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ChevronRight } from 'lucide-react';

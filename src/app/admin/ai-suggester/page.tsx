@@ -1,4 +1,4 @@
-import { AiSuggester } from "@/components/ai-suggester";
+import { AiSuggester } from "@/frontend/components/ai-suggester";
 
 export default function AiSuggesterPage() {
   return (

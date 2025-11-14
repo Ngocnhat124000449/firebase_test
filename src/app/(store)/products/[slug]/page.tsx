@@ -3,11 +3,11 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { PRODUCTS } from '@/lib/mock-data';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import { Button } from '@/frontend/components/ui/button';
+import { Badge } from '@/frontend/components/ui/badge';
 import { ShoppingCart, Package } from 'lucide-react';
-import { useCart } from '@/context/cart-provider';
-import { ProductCard } from '@/components/product-card';
+import { useCart } from '@/frontend/context/cart-provider';
+import { ProductCard } from '@/frontend/components/product-card';
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   const { dispatch } = useCart();

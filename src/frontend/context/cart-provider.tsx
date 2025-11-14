@@ -2,7 +2,7 @@
 
 import React, { createContext, useReducer, useContext, type ReactNode } from 'react';
 import type { CartItem, Product } from '@/lib/types';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/frontend/hooks/use-toast';
 
 type CartState = {
   items: CartItem[];
