@@ -1,3 +1,82 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-banner",
+      "description": "A close-up of a complex electronic circuit board with many components.",
+      "imageUrl": "https://images.unsplash.com/photo-1602493054376-d9dc3dfcbc7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxlbGVjdHJvbmljJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjMwMzc2NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electronic circuit"
+    },
+    {
+      "id": "product-cpu",
+      "description": "A modern microprocessor chip on a black background.",
+      "imageUrl": "https://images.unsplash.com/photo-1739054729925-7069f7790e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaWNyb3Byb2Nlc3NvciUyMGNoaXB8ZW58MHx8fHwxNzYzMTA3MjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "microprocessor chip"
+    },
+    {
+      "id": "product-ram",
+      "description": "A set of DDR4 RAM memory sticks.",
+      "imageUrl": "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxSQU0lMjBtZW1vcnl8ZW58MHx8fHwxNzYzMTA3MjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "RAM memory"
+    },
+    {
+      "id": "product-gpu",
+      "description": "A powerful gaming graphics card with multiple fans.",
+      "imageUrl": "https://images.unsplash.com/photo-1634672350437-f9632adc9c3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z3JhcGhpY3MlMjBjYXJkfGVufDB8fHx8MTc2MzEwNzIzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "graphics card"
+    },
+    {
+      "id": "product-ssd",
+      "description": "A sleek M.2 solid state drive.",
+      "imageUrl": "https://images.unsplash.com/photo-1602526428496-8346b5cf9954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzb2xpZCUyMGRyaXZlfGVufDB8fHx8MTc2MzEwNzIzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "solid drive"
+    },
+    {
+      "id": "product-motherboard",
+      "description": "A high-end computer motherboard with many slots and connectors.",
+      "imageUrl": "https://images.unsplash.com/photo-1629480613113-1ce05feadd48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21wdXRlciUyMG1vdGhlcmJvYXJkfGVufDB8fHx8MTc2MzAyMjE4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "computer motherboard"
+    },
+    {
+      "id": "product-psu",
+      "description": "A modular power supply unit with cables.",
+      "imageUrl": "https://images.unsplash.com/photo-1659856577105-c8ec1a364aa0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwb3dlciUyMHN1cHBseXxlbnwwfHx8fDE3NjMwMTA3MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "power supply"
+    },
+    {
+      "id": "product-sensor",
+      "description": "A small temperature and humidity sensor module.",
+      "imageUrl": "https://images.unsplash.com/photo-1685660251652-13a208dacc57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGVtcGVyYXR1cmUlMjBzZW5zb3J8ZW58MHx8fHwxNzYzMTA2MzE5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "temperature sensor"
+    },
+    {
+      "id": "product-module",
+      "description": "An ESP32 Wi-Fi and Bluetooth module.",
+      "imageUrl": "https://images.unsplash.com/photo-1586588833333-08622b507265?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aWZpJTIwbW9kdWxlfGVufDB8fHx8MTc2MzEwNzIzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wifi module"
+    },
+    {
+      "id": "product-ic",
+      "description": "A generic 16-pin integrated circuit chip.",
+      "imageUrl": "https://images.unsplash.com/photo-1611759386165-ed9beec7b14f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbnRlZ3JhdGVkJTIwY2lyY3VpdHxlbnwwfHx8fDE3NjMxMDcyMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "integrated circuit"
+    },
+    {
+      "id": "product-resistor-kit",
+      "description": "A kit of various resistors organized in a box.",
+      "imageUrl": "https://images.unsplash.com/photo-1627694743581-f31765d5c631?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxyZXNpc3RvciUyMGtpdHxlbnwwfHx8fDE3NjMxMDcyMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "resistor kit"
+    },
+    {
+      "id": "product-capacitor-kit",
+      "description": "An assortment of electrolytic capacitors.",
+      "imageUrl": "https://images.unsplash.com/photo-1595877704059-7ac51a2b41bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjYXBhY2l0b3IlMjBraXR8ZW58MHx8fHwxNzYzMTA3MjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "capacitor kit"
+    },
+    {
+      "id": "product-raspberry-pi",
+      "description": "A Raspberry Pi 4 single-board computer.",
+      "imageUrl": "https://images.unsplash.com/photo-1568332339712-fa479d5494fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyYXNwYmVycnklMjBwaXxlbnwwfHx8fDE3NjMxMDA5ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "raspberry pi"
+    }
+  ]
 }
